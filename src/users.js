@@ -51,7 +51,6 @@ function Users() {
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr id='heading'>
-                  <th>ID</th>
                   <th>Name</th>
                   <th>EMAIL</th>
                   <th>STATE</th>
@@ -64,7 +63,6 @@ function Users() {
                 users.map((user)=>{
                   return <tbody>
                   <tr id="column">
-                    <td>{user._id}</td>
                     <td>{user.name}</td>
                     <td>{user.email}</td>
                     <td>{user.state}</td>
