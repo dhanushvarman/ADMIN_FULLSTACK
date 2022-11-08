@@ -8,6 +8,7 @@ function Viewuser() {
   const params = useParams();
   const[users,setUsers]= useState([]);
   useEffect(()=>{
+    alert("Server is loading...,This may take few minutes")
     fetchdata()
   },[])
 

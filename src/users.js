@@ -13,6 +13,7 @@ function Users() {
   useEffect(()=>{
     const fetchdata = async ()=>{
       try {
+        alert("Server is loading...,This may take few minutes")
         setLoading(true)
         const users = await axios.get(`${config.api}/users`)
         setUsers(users.data)

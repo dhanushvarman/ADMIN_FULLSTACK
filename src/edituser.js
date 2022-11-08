@@ -12,6 +12,7 @@ function Createuser() {
     useEffect(()=>{
         const fetchdata = async()=>{
             try {
+                alert("Server is loading...,This may take few minutes")
                 const user =   await axios.get(`${config.api}/user/${params.id}`)
                 formik.setValues(user.data)
                 
