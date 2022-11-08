@@ -53,7 +53,7 @@ function Createuser() {
         },
         onSubmit: async (values) => {
             try {
-                await axios.put(`http://localhost:3003/user/${params.id}`,values)
+                await axios.put(`${config.api}/user/${params.id}`,values)
                 alert("User Updated Successfully")
                 formik.resetForm();
             } catch (error) {
