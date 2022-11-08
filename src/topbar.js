@@ -42,6 +42,8 @@ function Topbar() {
                     </div>
                 </li>
 
+                <div style={{paddingRight:"380px"}}>Server is slow...,This may take few minutes !!</div>
+
                 <button className='btn' onClick={handleLogout} ><i class="fa-solid fa-arrow-right-from-bracket mr-1"></i>Log Out</button>
 
                 
