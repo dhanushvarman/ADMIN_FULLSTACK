@@ -59,24 +59,12 @@ function Login() {
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <Link to={"/portal"} type="text" class="btn btn-primary btn-user btn-block">
+                                        <Link to={"/portal/users"} type="text" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </Link>
                                         <hr/>
-                                        <a  class="btn btn-google btn-user btn-block ">
-                                            <i class="fab fa-google fa-fw"></i> Login with Google
-                                        </a>
-                                        <a  class="btn btn-facebook btn-user btn-block ">
-                                            <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                                        </a>
                                     </form>
                                     <hr/>
-                                    <div class="text-center">
-                                        <a class="small " >Forgot Password?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" >Create an Account!</a>
-                                    </div>
                                 </div>
                             </div>
                         </div>

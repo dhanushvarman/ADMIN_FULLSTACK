@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import {config} from "./config"
+import { config } from "./config"
 
 
 
 function Createuser() {
+
+    const [loading, setloading] = useState(false)
+
     const formik = useFormik({
         initialValues: {
             name: "",
@@ -38,11 +41,13 @@ function Createuser() {
         },
         onSubmit: async (values) => {
             try {
+                setloading(true)
                 await axios.post(`${config.api}/user`, values)
+                setloading(false)
                 alert("User Created Successfully");
                 formik.resetForm()
             } catch (error) {
-                alert("Error")
+                console.log(error)
             }
         }
     })
@@ -172,9 +177,19 @@ function Createuser() {
                             </select>
                         </div>
                     </div>
-                    <div className='col-md-12'>
-                        <input type={"submit"} className="btn btn-success"></input>
-                    </div>
+                    {
+                        loading ?
+                            <div className='col-md-2'>
+                                <button class="btn btn-success" type="button" disabled>
+                                <span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>
+                                Submitting...
+                            </button>
+                            </div>
+                            :
+                            <div className='col-md-2'>
+                                <input type={"submit"} className="btn btn-success"></input>
+                            </div>
+                    }
                 </div>
             </form>
         </div>

@@ -24,12 +24,7 @@ function sidebar() {
                 </Link>
             </li>
             <hr class="sidebar-divider my-0" />
-            <li class="nav-item">
-                <Link  to={"dashboard"} class="nav-link">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
-                </Link>
-            </li>
+            
             
         </ul>
     )
